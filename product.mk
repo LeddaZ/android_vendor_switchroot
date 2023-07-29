@@ -9,6 +9,23 @@ endif
 PRODUCT_PACKAGES += \
     ConsoleLauncher
 
+## GMS
+ifeq ($(WITH_GMS), true)
+ifeq ($(PRODUCT_IS_ATV),true)
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+$(call inherit-product-if-exists, vendor/gapps_tv/arm64/arm64-vendor.mk)
+else
+$(call inherit-product-if-exists, vendor/gapps_tv/arm/arm-vendor.mk)
+endif # TARGET_SUPPORTS_64_BIT_APPS
+else
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+else
+$(call inherit-product-if-exists, vendor/gapps/arm/arm-vendor.mk)
+endif # TARGET_SUPPORTS_64_BIT_APPS
+endif # PRODUCT_IS_ATV
+endif # WITH_GMS
+
 ## ih8sn
 PRODUCT_PACKAGES += ih8sn
 PRODUCT_COPY_FILES += \
