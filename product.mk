@@ -1,7 +1,8 @@
 ## ATV
 ifeq ($(PRODUCT_IS_ATV),true)
 PRODUCT_PACKAGES += \
-    DocumentsUI
+    DocumentsUI \
+    LeanbackIME
 endif
 
 ## ConsoleLauncher
