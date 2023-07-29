@@ -4,6 +4,10 @@ PRODUCT_PACKAGES += \
     DocumentsUI
 endif
 
+## ConsoleLauncher
+PRODUCT_PACKAGES += \
+    ConsoleLauncher
+
 ## ih8sn
 PRODUCT_PACKAGES += ih8sn
 PRODUCT_COPY_FILES += \
