@@ -4,7 +4,7 @@ soong_namespace {
 android_app_import {
         name: "ConsoleLauncher",
         owner: "k2apps",
-        apk: "proprietary/app/ConsoleLauncher/ConsoleLauncher.apk",
+        apk: "apps/ConsoleLauncher/ConsoleLauncher.apk",
         presigned: true,
         dex_preopt: {
                 enabled: false,
