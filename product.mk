@@ -37,9 +37,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/switchroot/overlay-tab
 ## Recovery
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
 
-## Updater
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += lineage.updater.uri=https://ota.switchroot.org/api/v1/{device}/{type}/{incr}
-
 ## Signing
 ifeq ($(EXPERIMENTAL_BUILD),true)
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/certs/releasekey
